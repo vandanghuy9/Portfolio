@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    /* background-color: #0f1f87; */
+    font-family: 'Poppins', sans-serif;;
+}
+/* Start navbar */
+#header-nav{
+    background-color: #d80e0e;
+    height: 10vh;
+}
+#nav-list{
+    width: 50%;
+    height: 100%;
+}
+.container-fluid ul{
+    margin-bottom: 0;
+}
+.container-fluid ul li{
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    width: 30%;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container-fluid ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.container-fluid ul li:hover{
+    background-color: #000;
+}
+/* End Navbar */
+/* Start welcome section */
+#welcome-section{
+    background-color: #0ed8a9;
+    height: 100vh;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px;
+    padding: 10px;
+    position: relative;
+}
+/* profile picture */
+#welcome-section #picture{
+    border:2px solid #000;
+    width: 40%;
+    height: 60vh;
+    padding: 10px 10px 30px 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 50px;
+}
+/* Profile */
+#welcome-section #profile{
+    margin-right: 20px;
+    padding: 10px;
+    overflow: auto;
+    color: #0f1f87;
+    background-color: #f6f637;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    width: 45%;
+    height: 70%;
+    box-shadow: 10px 10px 5px  #aaaaaa;
+}
+
+#welcome-section p{
+    font-size: 1.2em;
+}
+
+#profile #introduction{
+    height: 30vh;
+    margin: 20vh auto 50vh auto;
+    text-align: center;
+}
+#profile #introduction p{
+    font-style: italic;
+}
+#profile #more-information{
+    color: #0f1f87;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+#profile #more-information:hover{
+    padding-top: 10px;
+    transition-duration: 0.3s;
+}
+.title {
+    width: 100%;
+    height: auto;
+    padding-top:10px ;
+    padding-bottom:10px ;
+    margin-bottom: 30px;
+}
+.title .line-tag{
+    width: 10%;
+    height: 5px;
+    background-color: #0f1f87;
+    display: inline-block;
+}
+
+.title h2{
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-style:italic;
+}
+
+/* Progress bar */
+
+.progress{
+    height: 35px ;
+}
+
+/* Skills */
+/* End welcome section */
+#skill span{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#project{
+    background-color: #2f2b2b;
+    padding-bottom: 50px;
+}
+#project h1{
+    padding-top: 70px;
+    padding-bottom: 30px;
+    color: #fff;
+    text-align: center;
+}
+#restaurant-website,#database,#nodeJS{
+    margin: 0 auto 5px 0;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    border: 2px solid #fff;
+}
+
+#restaurant-website{
+    background-image: url('./restaurant.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#database{
+    background-image: url('./database.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#nodeJS{
+    background-image: url('./nodejs.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#restaurant-website span,#database span,#nodeJS span{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(41, 38, 38);
+}
+#restaurant-website span:hover,#database span:hover,#nodeJS span:hover{
+    font-size: 35px;
+    transition-duration: 0.5s;
+}
+#restaurant-website:hover,#database:hover,#nodeJS:hover { 
+    box-shadow: 5px 5px #787878;
+    transition-duration: 0.2s;
+}
+
+#contact{
+    background-color: #706161;
+    width: 100%;
+    font-size: 1.5em;
+    padding-top: 100px;
+}
+
+#contact h1, #contact p{
+    text-align: center;
+    font-size: 2em;
+    color:#fff;
+}
+.fab{
+    font-family: "Font Awesome 5 Brands";
+    font-size: 1.5em;
+}
+
+#contact-link .description{
+    color: #fff;
+    text-decoration: none;
+    padding:10px;
+    text-align: center;
+}
+
+#contact-link .description:hover{
+    padding-top: 15px;
+    transition-duration: 0.2s;
+}
+
+/* Contact section */
+#contact-form{
+    color:#fff;
+    padding-top:20px;
+  }
+form{
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+  #contact-form h5{
+    text-align:center;
+    font-style:italic;
+  }
+  
+  .form-row .form-input{
+    display:block;
+    border-radius:10px;
+    height:40px;
+    width:100%;
+    padding:0.375rem 0.75em;
+    font-family:Arial, Helvetica, sans-serif ;
+  }
+
+  .submit-button{
+    background-color: #f6f637;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius:10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  /* end contact section  */
+
+/* end main */
+/* start footer */
+footer{
+    background-color: #706161;
+    color: #fff;
+    border-top: 2px solid #000;
+}
+/* end footer */
+
+@media (min-width: 1200px){
+    #welcome-section #picture{
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg);
+    }
+}
