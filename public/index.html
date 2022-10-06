@@ -216,7 +216,7 @@
 
             <!-- Message form -->
             <div id='contact-form'>
-                <form action="/" method="POST">
+                <form >
                     <h5>Send me message directly</h5>
                     <div class="form-row">
                         <div class="">
@@ -224,7 +224,7 @@
                             <input type="text" name="name" id="name" class="form-input" autocomplete="false">
                         </div>
                         <div class="">
-                            <label for='Email'>Your email</label>
+                            <label for='email'>Your email</label>
                             <input type="text" name="email" id="email" class="form-input" autocomplete="false">
                         </div>
                         <div class="">
@@ -252,12 +252,35 @@
         <script src="./jquery-3.6.1.min.js"></script>
         <script src="./bootstrap.min.js"></script>
         <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"        
             integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-            crossorigin="anonymous">
+            crossorigin="anonymous"> 
+        </script> <!-- install axios module  -->
+        <script>
+            const button = document.querySelector('.submit-button');
+            const nameInput= document.querySelector('#name');
+            const emailInput =document.querySelector('#email');
+            const messageInput = document.querySelector('#message');
+            button.addEventListener('click', async function(e){
+                e.preventDefault();
+                try{
+                    const nameValue = nameInput.value;
+                    const emailValue = emailInput.value;
+                    const message = messageInput.value;
+                    const data = await axios.post('/api/message',{name:nameValue,email:emailValue,message:message});
+                    document.querySelector('.submit-noti').innerHTML = 'Thank you and i will contact you soon';
+                    const noti_Timeout = setTimeout(function(){
+                        document.querySelector('.submit-noti').innerHTML = '';
+                    },5000);
+                }
+                catch(error){
+                    document.querySelector('.submit-noti').innerHTML = error.response.data.msg;
+                }
+                nameInput.value='';
+                emailInput.value='';
+                messageInput.value ='';
+            });
         </script>
-        
-        <script src="./portfolio.js">
-        </script>
+        <script src="./portfolio.js"></script>
     </body>
 </html>

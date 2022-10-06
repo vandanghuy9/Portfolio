@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection({
+const connection = mysql.createConnection({ //chuyen sang file rieng
     host: 'localhost',
     user:'root',
     password:'15112002',
